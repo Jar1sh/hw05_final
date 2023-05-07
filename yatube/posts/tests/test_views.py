@@ -1,15 +1,15 @@
-from django import forms
-from django.conf import settings
-from django.urls import reverse
-from django.test import Client, TestCase
-from django.core.cache import cache
-from django.core.files.uploadedfile import SimpleUploadedFile
-
-from ..forms import PostForm
-from ..models import Group, Post, User, Follow
-
 import shutil
 import tempfile
+
+from django import forms
+from django.conf import settings
+from django.core.cache import cache
+from django.core.files.uploadedfile import SimpleUploadedFile
+from django.test import Client, TestCase
+from django.urls import reverse
+
+from ..forms import PostForm
+from ..models import Follow, Group, Post, User
 
 
 class PostViewsTests(TestCase):

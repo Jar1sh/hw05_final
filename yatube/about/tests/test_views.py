@@ -21,7 +21,6 @@ class AboutViewsTests(TestCase):
 
     def test_urls_address_to_template(self):
         """Тест вызова шаблонов по указанному адресу."""
-
         for url, template in self.template_name.items():
             with self.subTest(template=template):
                 response = self.guest_client.get(reverse(url))
